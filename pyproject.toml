@@ -1,0 +1,21 @@
+[project]
+name = "hello-claude-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.111.0",
+    "click>=8.4.1",
+    "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+hello-claude = "hello_claude.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hello_claude"]
