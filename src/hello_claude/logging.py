@@ -23,3 +23,4 @@ def log_call(model, system, prompt, response, input_tokens, output_tokens, laten
 
     with open(LOG_FIL, "a") as f: 
         f.write(json.dumps(entry) + "\n")
+

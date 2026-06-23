@@ -35,7 +35,7 @@ def call_claude(prompt: str, model: str="claude-sonnet-4-6", system: str="") -> 
         latency_ms=latency_ms,
         cost_usd=cost,)
 
-    return text
+    return text, cost
     
 def stream_claude(prompt: str, model: str="claude-sonnet-4-6", system: str=""):
      """ Send a prompt to claude and you'll get text by text"""
@@ -48,5 +48,3 @@ def stream_claude(prompt: str, model: str="claude-sonnet-4-6", system: str=""):
      ) as stream: 
         for text in stream.text_stream:
             yield text
-        
-     
