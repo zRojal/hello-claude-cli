@@ -10,7 +10,7 @@ MODELS = {
 @click.command()
 @click.option("--prompt", required=True, help="The prompt to send to claude")
 @click.option("--model", type=click.Choice(["haiku", "sonnet", "opus"]), default ="sonnet", help="...")
-@click.option("--stream/--no--stream", default=True, help="Stream the response as it arrives.")
+@click.option("--stream/--no-stream", default=True, help="Stream the response as it arrives.")
 @click.option("--system", default="", help="A custom system prompt to shape Claude's behavior")
 def main(prompt, model, stream, system): 
     """Send a prompt to Claude and print the response."""
